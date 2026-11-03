@@ -1,8 +1,8 @@
-# TaoMate-HD
+# <img src="assets/taomate-hd-logo.gif" width="40" height="40" alt="" /> TaoMate-HD
 
 **Progressive-Resolution Autoregressive Audio-Video Generation**
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-red.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2611.03394-red.svg)](https://arxiv.org/abs/2611.03394)
   [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://taoliveaigc.github.io/TaoMate-HD/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow)](https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview)
 
 <!-- Demo video -->
@@ -19,6 +19,7 @@ Continuation training uses the model's own progressive rollouts. The generator a
 ## News
 
 - **2026-11-03:** 🎉🎉🎉 First release of the [inference code](https://github.com/TaoLiveAIGC/TaoMate-HD) and [preview LoRA weights](https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview).
+- **2026-11-03:** Our [paper](https://arxiv.org/abs/2611.03394) is available on arXiv.
 
 ## Comparison
 
@@ -151,9 +152,14 @@ The example contains two consecutive five-second prompts, preserving the first t
 ## Citation
 
 ```bibtex
-@misc{taomatehd2026,
-  title = {TaoMate-HD: Progressive-Resolution Autoregressive Audio-Video Generation},
-  year = {2026}
+@misc{gan2026taomatehdprogressiveresolutionautoregressiveaudiovideo,
+  title={TaoMate-HD: Progressive-Resolution Autoregressive Audio-Video Generation},
+  author={Qijun Gan and Chenwei Zhang and Xinyang Li and Meiguang Jin and Junfeng Ma and Shen Qiu},
+  year={2026},
+  eprint={2611.03394},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2611.03394}
 }
 ```
 
