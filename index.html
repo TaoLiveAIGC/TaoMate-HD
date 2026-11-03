@@ -8,29 +8,33 @@
   <meta property="og:title" content="TaoMate-HD — Audio and video, in a continuing stream.">
   <meta property="og:description" content="One joint audio-video trajectory. Coarse-to-fine generation and speech that continues as dialogue evolves. An open research project by Alibaba TaoLive AIGC Team.">
   <title>TaoMate-HD · Streaming Audio-Video Generation</title>
-  <link rel="icon" href="assets/mark.svg?v=paper-palette" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=preview-release">
+  <link rel="icon" href="assets/mark.svg?v=stream-mark" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=arxiv-release">
   <script src="data.js?v=preview-release" defer></script>
-  <script src="app.js?v=preview-release" defer></script>
+  <script src="app.js?v=sunset-background" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="header">
-    <a class="brand" href="#" aria-label="TaoMate-HD home"><img src="assets/mark.svg?v=paper-palette" alt="" width="26" height="26">TaoMate<span>-HD</span></a>
+  <main id="main">
+    <div class="hero-surface">
+      <div class="hero-background" aria-hidden="true">
+        <video id="hero-background-video" muted autoplay loop playsinline preload="none" poster="assets/hour-skeleton.jpg" tabindex="-1"></video>
+      </div>
+  <header class="header" role="banner">
+    <a class="brand" href="#" aria-label="TaoMate-HD home"><img src="assets/mark-stream.svg" alt="" width="28" height="28">TaoMate<span>-HD</span></a>
     <nav aria-label="Main navigation"><a href="#demos">Demos</a><a href="#long-form">Long-form</a><a href="#method">Method</a><a href="#results">Results</a></nav>
     <a class="header-link" href="#resources">Open research <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main id="main">
     <section class="hero section-shell" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> ALIBABA TAOLIVE AIGC TEAM</p>
-        <h1 id="hero-title">TaoMate<span>-HD</span></h1>
+        <div class="hero-brand"><img src="assets/mark-stream.svg" alt="" width="56" height="56"><h1 id="hero-title">TaoMate<span>-HD</span></h1></div>
         <h2>Audio and video.<br>In a continuing <em>stream.</em></h2>
         <p class="hero-description">Progressive-Resolution Autoregressive<br class="desktop-break"> Audio-Video Generation</p>
         <p class="hero-detail">High-resolution video and sound, generated together. Coarse-to-fine chunks carry audiovisual context forward as the dialogue evolves.</p>
         <div class="hero-actions"><a class="button primary" href="#demos">Explore the demos <span aria-hidden="true">↘</span></a><a class="button secondary" href="#method">How it works <span aria-hidden="true">↓</span></a></div>
-        <div class="resource-strip" aria-label="Release resources"><span>Paper <small>SOON</small></span><a href="https://github.com/TaoLiveAIGC/TaoMate-HD">Code <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview">Preview weights <span aria-hidden="true">↗</span></a></div>
+        <div class="resource-strip" aria-label="Release resources"><a href="https://arxiv.org/abs/2611.03394">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/TaoLiveAIGC/TaoMate-HD">Code <span aria-hidden="true">↗</span></a><a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview">Preview weights <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="hero-art" aria-label="Selected generated scenes">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
@@ -41,10 +45,11 @@
       </div>
       <a class="scroll-cue" href="#demos"><span>SCROLL TO EXPLORE</span> ↓</a>
     </section>
+    </div>
 
     <div class="facts section-shell"><div><strong>3<span> steps</span></strong><p>Progressive denoising</p></div><div><strong>Audio <span>+</span> video</strong><p>One generative model</p></div><div><strong>60<span> minutes</span></strong><p>Long-form demonstrations</p></div><div><strong>Open<span> research</span></strong><p>Code & preview weights</p></div></div>
 
-    <section class="news section-shell" aria-labelledby="news-title"><h2 id="news-title">News</h2><p><time datetime="2026-11-03">November 3, 2026</time> First release of the <a href="https://github.com/TaoLiveAIGC/TaoMate-HD">inference code</a> and <a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview">preview weights</a>.</p></section>
+    <section class="news section-shell" aria-labelledby="news-title"><h2 id="news-title">News</h2><p><time datetime="2026-11-03">November 3, 2026</time> Our <a href="https://arxiv.org/abs/2611.03394">paper</a> is on arXiv, with the first release of the <a href="https://github.com/TaoLiveAIGC/TaoMate-HD">inference code</a> and <a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview">preview weights</a>.</p></section>
 
     <section id="demos" class="section-shell section demos-section" aria-labelledby="demos-title">
       <div class="section-heading"><div><p class="eyebrow">01 / GENERATED WORLDS</p><h2 id="demos-title">See it. <em>Hear it.</em></h2></div><p>Conversations, performances, and imagined worlds.<br>A selection of audio-video generation across scenes and styles.</p></div>
@@ -117,11 +122,19 @@
 
     <section id="resources" class="section-shell section resources-section" aria-labelledby="resources-title">
       <p class="eyebrow">05 / BUILT TO BE SHARED</p><h2 id="resources-title">The next chapter<br>is <em>open.</em></h2><p>Explore the demos, run inference, and build with TaoMate-HD.<br>Inference code and preview weights are available below.</p>
-      <div class="release-links"><div><span class="release-symbol">↗</span><h3>Paper</h3><span class="coming">Coming soon</span></div><a href="https://github.com/TaoLiveAIGC/TaoMate-HD"><span class="release-symbol">〈/〉</span><h3>Inference code</h3><span class="coming">GitHub ↗</span></a><a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview"><span class="release-symbol">◇</span><h3>Preview weights</h3><span class="coming">Hugging Face ↗</span></a></div>
-      <div class="citation-heading"><h3>Citation</h3><span>Publication details will be added at release.</span></div><div class="citation"><code>TaoMate-HD: Progressive-Resolution Autoregressive Audio-Video Generation</code></div>
+      <div class="release-links"><a href="https://arxiv.org/abs/2611.03394"><span class="release-symbol">↗</span><h3>Paper</h3><span class="coming">arXiv:2611.03394 ↗</span></a><a href="https://github.com/TaoLiveAIGC/TaoMate-HD"><span class="release-symbol">〈/〉</span><h3>Inference code</h3><span class="coming">GitHub ↗</span></a><a href="https://huggingface.co/TaoLiveAIGC/TaoMate-HD-preview"><span class="release-symbol">◇</span><h3>Preview weights</h3><span class="coming">Hugging Face ↗</span></a></div>
+      <div class="citation-heading"><h3>Citation</h3><span>arXiv:2611.03394 · 2026</span></div><div class="citation"><code>@misc{gan2026taomatehdprogressiveresolutionautoregressiveaudiovideo,
+  title={TaoMate-HD: Progressive-Resolution Autoregressive Audio-Video Generation},
+  author={Qijun Gan and Chenwei Zhang and Xinyang Li and Meiguang Jin and Junfeng Ma and Shen Qiu},
+  year={2026},
+  eprint={2611.03394},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2611.03394}
+}</code></div>
     </section>
   </main>
-  <footer class="footer section-shell"><div><a class="brand" href="#">TaoMate<span>-HD</span></a><p>Alibaba TaoLive AIGC Team</p></div><div class="footer-note"><p>Built on MiniMax H3. With thanks to the open research community.</p><p>Model release follows the MiniMax H3 Community License.</p></div><a href="#" aria-label="Back to top">BACK TO TOP ↑</a></footer>
+  <footer class="footer section-shell"><div><a class="brand" href="#"><img src="assets/mark-stream.svg" alt="" width="28" height="28">TaoMate<span>-HD</span></a><p>Alibaba TaoLive AIGC Team</p></div><div class="footer-note"><p>Built on MiniMax H3. With thanks to the open research community.</p><p>Model release follows the MiniMax H3 Community License.</p></div><a href="#" aria-label="Back to top">BACK TO TOP ↑</a></footer>
 
 </body>
 </html>

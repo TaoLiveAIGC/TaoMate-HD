@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .packet {
+      animation:continue-stream 2.8s cubic-bezier(.4,0,.2,1) infinite;
+    }
+    @keyframes continue-stream {
+      0%,18% {transform:translateX(0);opacity:1}
+      47% {transform:translateX(9px);opacity:0}
+      48% {transform:translateX(-8px);opacity:0}
+      76%,100% {transform:translateX(0);opacity:1}
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .packet {animation:none}
+    }
+  </style>
+  <defs>
+    <clipPath id="tile"><rect width="64" height="64" rx="17"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="17" fill="#cf4e08"/>
+  <path d="M17 18h21a4.5 4.5 0 0 1 0 9h-2v18a4.5 4.5 0 0 1-9 0V27H17a4.5 4.5 0 0 1 0-9Z" fill="#fff"/>
+  <g clip-path="url(#tile)">
+    <rect class="packet" x="47" y="18" width="7" height="9" rx="3.5" fill="#fff"/>
+  </g>
+</svg>

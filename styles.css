@@ -90,6 +90,34 @@ h2 em {
   color:var(--accent-strong);
   text-transform:uppercase
 }
+.hero-surface {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#fff7f1
+}
+.hero-background {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+  pointer-events:none;
+  background:url('assets/hour-skeleton.jpg') center / cover no-repeat
+}
+.hero-background video {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 48%;
+  filter:blur(6px) saturate(.82);
+  transform:scale(1.04)
+}
+.hero-background:after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,#fffffff2 0%,#ffffffdc 35%,#ffffff57 72%,#ffffff29 100%),linear-gradient(180deg,#ffffff73 0%,#ffffff00 45%,#ffffffb3 100%)
+}
 .header {
   height:82px;
   margin:0 auto;
@@ -185,6 +213,20 @@ h2 em {
   color:var(--accent);
   font-style:italic
 }
+.hero-brand {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:24px 0 16px
+}
+.hero-brand h1 {
+  margin:0
+}
+.hero-brand>img {
+  width:clamp(42px,4.3vw,56px);
+  height:auto;
+  flex:none
+}
 .hero h2 {
   font-size:clamp(38px,4.4vw,61px);
   line-height:1.05;
@@ -268,7 +310,7 @@ h2 em {
   content:'';
   position:absolute;
   inset:-120px -60px;
-  background:radial-gradient(ellipse at center,#ffe3d680 0,transparent 65%);
+  background:radial-gradient(ellipse at center,#ffe3d629 0,transparent 65%);
   z-index:-1
 }
 .orbit {
@@ -1084,6 +1126,8 @@ tbody td {
   margin:auto
 }
 .citation code {
+  display:block;
+  white-space:pre-wrap;
   font-size:11px;
   color:var(--ink);
   line-height:1.8;
@@ -1416,8 +1460,15 @@ tbody td {
     gap:27px
   }
   .hero h1 {
-    font-size:61px;
+    font-size:clamp(46px,15vw,61px);
     margin-top:20px
+  }
+  .hero-brand {
+    gap:12px;
+    margin-top:20px
+  }
+  .hero-brand h1 {
+    margin:0
   }
   .hero h2 {
     font-size:44px;
@@ -1761,7 +1812,7 @@ tbody td {
   .release-links {
     margin-top:32px
   }
-  .release-links>div {
+  .release-links>div,.release-links>a {
     padding:22px 8px
   }
   .release-links h3 {

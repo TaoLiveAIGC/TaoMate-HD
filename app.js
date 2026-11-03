@@ -156,6 +156,12 @@ document.querySelectorAll('[data-filter]').forEach(button => {
   });
 });
 
+const heroBackground = document.querySelector('#hero-background-video');
+heroBackground.dataset.src = MEDIA_ROOT + 'hour-dance.mp4';
+heroBackground.dataset.silent = 'true';
+previewVideos.push(heroBackground);
+previewObserver.observe(heroBackground);
+
 mountPreview(document.querySelector('.hero-main'), {
   title: 'Origami animation', poster: 'assets/dragon.jpg', src: MEDIA_ROOT + 'hero-origami.mp4'
 });
